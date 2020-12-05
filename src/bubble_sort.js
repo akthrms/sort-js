@@ -7,7 +7,7 @@ for (let i of until(0, len)) {
   // 各要素のインデックスをループ
   for (let j of until(0, len - i)) {
     // 隣り合う要素を比較するためのループ
-    // `arr[len - i]`以降の要素は整列済みとなる
+    // `(len - i)`より大きい要素は整列済み
     if (arr[j] > arr[j + 1]) {
       // 現在の要素が次の要素より大きい場合は入れ替える
       swap(arr, j, j + 1);
