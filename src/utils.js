@@ -1,3 +1,7 @@
+function equalsArray(arr1, arr2) {
+  return JSON.stringify(arr1) === JSON.stringify(arr2);
+}
+
 function to(start, end) {
   return [...Array(end + 1).keys()].slice(start);
 }
@@ -14,30 +18,24 @@ function swap(arr, index1, index2) {
   [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
 }
 
-console.assert(
-  JSON.stringify(to(0, 3)) === JSON.stringify([0, 1, 2, 3]),
-  "to()"
-);
+console.assert(equalsArray([0, 1, 2, 3], [0, 1, 2, 3]), "equalsArray()");
 
-console.assert(
-  JSON.stringify(until(0, 3)) === JSON.stringify([0, 1, 2]),
-  "until()"
-);
+console.assert(equalsArray(to(0, 3), [0, 1, 2, 3]), "to()");
 
-console.assert(
-  JSON.stringify(downTo(3, 0)) === JSON.stringify([3, 2, 1, 0]),
-  "downTo()"
-);
+console.assert(equalsArray(until(0, 3), [0, 1, 2]), "until()");
+
+console.assert(equalsArray(downTo(3, 0), [3, 2, 1, 0]), "downTo()");
 
 console.assert(
   (() => {
     const arr = [1, 2, 3];
     swap(arr, 0, 2);
-    return JSON.stringify(arr) === JSON.stringify([3, 2, 1]);
+    return equalsArray(arr, [3, 2, 1]);
   })(),
   "swap()"
 );
 
+exports.equalsArray = equalsArray;
 exports.to = to;
 exports.until = until;
 exports.downTo = downTo;

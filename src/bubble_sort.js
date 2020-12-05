@@ -1,4 +1,4 @@
-const { swap, until } = require("./utils");
+const { equalsArray, swap, until } = require("./utils");
 
 let arr = [2, 4, 1, 3, 5];
 let len = arr.length;
@@ -15,7 +15,4 @@ for (let i of until(0, len)) {
   }
 }
 
-console.assert(
-  JSON.stringify(arr) === JSON.stringify([1, 2, 3, 4, 5]),
-  "bubble sort"
-);
+console.assert(equalsArray(arr, [1, 2, 3, 4, 5]), "bubble sort");
