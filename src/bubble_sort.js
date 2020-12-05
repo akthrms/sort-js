@@ -17,5 +17,5 @@ for (let i of until(0, len)) {
 
 console.assert(
   JSON.stringify(arr) === JSON.stringify([1, 2, 3, 4, 5]),
-  "bubble_sort"
+  "bubble sort"
 );
