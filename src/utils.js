@@ -75,6 +75,21 @@ function swap(arr, index1, index2) {
   [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
 }
 
+/**
+ * `arr`の末尾に`elem`を追加した配列を返す
+ *
+ * ```js
+ * cons([1, 2], 3) == [1, 2, 3]
+ * ```
+ *
+ * @param {Array} arr
+ * @param {*} elem
+ * @returns {Array}
+ */
+function cons(arr, elem) {
+  return [...arr, elem];
+}
+
 console.assert(equalsArray([0, 1, 2, 3], [0, 1, 2, 3]), "equalsArray()");
 
 console.assert(equalsArray(to(0, 3), [0, 1, 2, 3]), "to()");
@@ -92,8 +107,11 @@ console.assert(
   "swap()"
 );
 
+console.assert(equalsArray(cons([1, 2], 3), [1, 2, 3]), "cons()");
+
 exports.equalsArray = equalsArray;
 exports.to = to;
 exports.until = until;
 exports.downTo = downTo;
 exports.swap = swap;
+exports.cons = cons;
