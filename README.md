@@ -7,3 +7,4 @@ JS で各種ソートアルゴリズムを実装する
 - [挿入ソート](./src/insertion_sort.js)
 - [マージソート](./src/merge_sort.js)
 - [クイックソート](./src/quick_sort.js)
+- [シェルソート](./src/shell_sort.js)
