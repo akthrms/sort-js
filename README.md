@@ -6,3 +6,4 @@ JS で各種ソートアルゴリズムを実装する
 - [選択ソート](./src/selection_sort.js)
 - [挿入ソート](./src/insertion_sort.js)
 - [マージソート](./src/merge_sort.js)
+- [クイックソート](./src/quick_sort.js)
